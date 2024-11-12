@@ -27,7 +27,9 @@ for (let i = 1; i < biciclette.length; i++) {
 // Stampare a schermo o in console la bici con peso minore
 console.log(`La bici con il peso minore è la ${biciLeggera.nome}, con un peso di ${biciLeggera.peso} kg.`);
 console.log("-------------------------------------------------------------------")
+
 console.log("Snack 2")
+
 // Snack2
 // Creare un array di oggetti di squadre di calcio.
 // Ogni squadra avrà diverse proprietà: nome, punti fatti, falli subiti.
@@ -71,5 +73,33 @@ console.log(squadre);
 console.log('Nuovo array con nomi e falli subiti:');
 console.log(nuovoArray);
 console.log("-------------------------------------------------------------------")
+
+console.log("Snack 3")
+
+// Snack 3 (Bonus)
+// Scrivere una funzione che accetti tre argomenti, un array e due numeri (a più piccolo di b).
+// La funzione ritornerà un nuovo array con i valori che hanno la posizione compresa tra i due numeri. Non usare i metodi di array di JS
+
+function estraiValori(Array, a, b){
+    
+    let nuovoArray =[];
+    
+    for (let i=a ; i<=b; i++){
+        nuovoArray.push(Array[i]);
+    }
+    return nuovoArray;
+}
+
+//Esempio
+const arrayOriginale = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]; 
+const a = 2; 
+const b = 5; 
+const nuovoArray2 = estraiValori(arrayOriginale, a, b); 
+console.log(arrayOriginale)
+console.log(a,b)
+console.log(nuovoArray2)
+
+
+
 
 
