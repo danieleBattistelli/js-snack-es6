@@ -28,3 +28,48 @@ for (let i = 1; i < biciclette.length; i++) {
 console.log(`La bici con il peso minore è la ${biciLeggera.nome}, con un peso di ${biciLeggera.peso} kg.`);
 console.log("-------------------------------------------------------------------")
 console.log("Snack 2")
+// Snack2
+// Creare un array di oggetti di squadre di calcio.
+// Ogni squadra avrà diverse proprietà: nome, punti fatti, falli subiti.
+// Nome sarà l’unica proprietà da compilare, le altre saranno tutte settate a 0.
+// Generare numeri random al posto degli 0 nelle proprietà “punti” fatti e “falli subiti”.
+// Infine, creiamo un nuovo array i cui elementi contengono solo nomi e falli subiti e stampiamo tutto in console.
+
+// Funzione per generare un numero casuale tra min e max
+function getRandomNumber(min,max){
+    return Math.floor(Math.random() * (max-min+1) ) +min;
+}
+
+// Creazione dell'array di oggetti squadre di calcio
+const squadre = [
+    { nome: 'Juventus', punti: 0, falli: 0 },
+    { nome: 'Milan', punti: 0, falli: 0 },
+    { nome: 'Inter', punti: 0, falli: 0 },
+    { nome: 'Roma', punti: 0, falli: 0 },
+    { nome: 'Napoli', punti: 0, falli: 0 }
+];
+
+// Generare numeri random per punti e falli
+for (let i = 0; i < squadre.length; i++) {
+    squadre[i].punti = getRandomNumber(0, 100);
+    squadre[i].falli = getRandomNumber(0, 50);
+}
+
+// Creazione del nuovo array con solo nomi e falli subiti
+const nuovoArray = [];
+for (let i= 0; i < squadre.length; i++){
+    nuovoArray.push({
+        nome:squadre[i].nome,
+        falli:squadre[i].falli
+    });
+}
+
+// Stampare tutto in console
+console.log('Array originale:');
+console.log(squadre);
+
+console.log('Nuovo array con nomi e falli subiti:');
+console.log(nuovoArray);
+console.log("-------------------------------------------------------------------")
+
+
